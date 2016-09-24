@@ -21,7 +21,7 @@ $app->get('/', function () use ($app) {
 $app->group(['prefix' => 'api', 'middleware' => ['doTheyWantYouToSucceed']], function() use ($app) {
 
     $app->get('quote', function () {
-        return QuotesController::response();
+        return QuotesController::getResponse();
     });
 }
 );

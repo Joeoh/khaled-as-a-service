@@ -14,8 +14,12 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 class QuotesController extends BaseController
 {
 
-    public static function response() : Response {
-        return response(self::getRandomQuote()->toJson());
+    public static function getResponse() : Response {
+        $quote = self::getRandomQuote();
+        if($quote === null){
+            return response(["error" => "No quotes found"], 404);
+        }
+        return response($quote->toJson());
     }
 
 
