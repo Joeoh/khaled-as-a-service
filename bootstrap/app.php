@@ -60,13 +60,13 @@ $app->singleton(
 |
 */
 
-$app->middleware([
-    App\Http\Middleware\DoTheyWantYouToSucceed::class
- ]);
+//$app->middleware([
+//
+//]);
 
-//$app->routeMiddleware([
-//     'doTheyWantYouToSucceed' => App\Http\Middleware\DoTheyWantYouToSucceed::class,
-// ]);
+$app->routeMiddleware([
+     'doTheyWantYouToSucceed' => App\Http\Middleware\DoTheyWantYouToSucceed::class,
+ ]);
 
 /*
 |--------------------------------------------------------------------------
