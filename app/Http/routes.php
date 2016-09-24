@@ -11,7 +11,6 @@
 |
 */
 
-use \Kaas\Controllers\QuotesController;
 
 
 $app->get('/', function () use ($app) {
@@ -20,8 +19,6 @@ $app->get('/', function () use ($app) {
 
 $app->group(['prefix' => 'api', 'middleware' => ['doTheyWantYouToSucceed']], function() use ($app) {
 
-    $app->get('quote', function () {
-        return QuotesController::getResponse();
-    });
+    $app->get('quote', "\Kaas\Controllers\QuotesController@show");
 }
 );
