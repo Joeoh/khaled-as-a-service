@@ -11,6 +11,9 @@
 |
 */
 
+use \Kaas\Controllers\QuotesController;
+
+
 $app->get('/', function () use ($app) {
     return view('index');
 });
@@ -18,7 +21,7 @@ $app->get('/', function () use ($app) {
 $app->group(['prefix' => 'api', 'middleware' => ['doTheyWantYouToSucceed']], function() use ($app) {
 
     $app->get('quote', function () {
-        return 'We just seen two dolphins';
+        return QuotesController::response();
     });
 }
 );

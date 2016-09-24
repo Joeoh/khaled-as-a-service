@@ -1,6 +1,7 @@
 <?php
 namespace Kaas\Controllers;
 
+use Illuminate\Http\Response;
 use Kaas\Models\Quote;
 use Laravel\Lumen\Routing\Controller as BaseController;
 
@@ -12,12 +13,18 @@ use Laravel\Lumen\Routing\Controller as BaseController;
  */
 class QuotesController extends BaseController
 {
-    public function getRandomQuote() : Quote
+
+    public static function response() : Response {
+        return response(self::getRandomQuote()->toJson());
+    }
+
+
+    private static function getRandomQuote() : Quote
     {
         $count = Quote::count();
         if ($count > 0) {
             $diceRoll = rand(1, $count);
-            return Quote::where("id",$diceRoll)->get();
+            return Quote::find($diceRoll);
         }
 
         return null;
