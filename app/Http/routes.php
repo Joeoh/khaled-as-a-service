@@ -12,5 +12,5 @@
 */
 
 $app->get('/', function () use ($app) {
-    return 'We just seen two dolphins';
+    return view('index');
 });
