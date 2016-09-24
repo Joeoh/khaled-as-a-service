@@ -11,14 +11,14 @@
 |
 */
 
+
+
 $app->get('/', function () use ($app) {
     return view('index');
 });
 
 $app->group(['prefix' => 'api', 'middleware' => ['doTheyWantYouToSucceed']], function() use ($app) {
 
-    $app->get('quote', function () {
-        return 'We just seen two dolphins';
-    });
+    $app->get('quote', "\Kaas\Controllers\QuotesController@show");
 }
 );
