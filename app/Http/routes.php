@@ -14,3 +14,11 @@
 $app->get('/', function () use ($app) {
     return 'We just seen two dolphins';
 });
+
+$app->group(['prefix' => 'api', 'middleware' => ['doTheyWantYouToSucceed']], function() use ($app) {
+
+    $app->get('quote', function () {
+        return 'We just seen two dolphins';
+    });
+}
+);

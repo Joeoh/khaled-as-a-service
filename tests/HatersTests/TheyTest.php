@@ -18,7 +18,7 @@ class TheyTest extends TestCase
      */
     public function test_application_requests_can_be_rejected_by_the_powers_that_be()
     {
-        $statusCode = $this->get('/')->response->getStatusCode();
+        $statusCode = $this->get('/api/quote')->response->getStatusCode();
 
         $limit = 1000;
 
@@ -30,7 +30,7 @@ class TheyTest extends TestCase
                 $this->fail();
             }
 
-            $statusCode = $this->get('/')->response->getStatusCode();
+            $statusCode = $this->get('/api/quote')->response->getStatusCode();
         }
     }
 
@@ -40,7 +40,7 @@ class TheyTest extends TestCase
      */
     public function test_application_requests_can_be_successful()
     {
-        $statusCode = $this->get('/')->response->getStatusCode();
+        $statusCode = $this->get('/api/quote')->response->getStatusCode();
 
         $limit = 10;
 
@@ -52,7 +52,7 @@ class TheyTest extends TestCase
                 $this->fail();
             }
 
-            $statusCode = $this->get('/')->response->getStatusCode();
+            $statusCode = $this->get('/api/quote')->response->getStatusCode();
         }
     }
 
