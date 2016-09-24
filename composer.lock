@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d89f77b3a3eb92a80721cae6ea5fdf55",
-    "content-hash": "3bbee0eb882fba009d9886d9d7f4b79e",
+    "hash": "641dc2b24419ea6bb5728c75ead8d8ff",
+    "content-hash": "f9596b4fd8b3880ccbd9f31f99e7d321",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1214,6 +1214,44 @@
                 "lumen"
             ],
             "time": "2016-09-07 18:38:54"
+        },
+        {
+            "name": "mlntn/lumen-artisan-serve",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mlntn/lumen-artisan-serve.git",
+                "reference": "fb6fa1d21c166cc294bcd935baf01f6cfe55f85d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mlntn/lumen-artisan-serve/zipball/fb6fa1d21c166cc294bcd935baf01f6cfe55f85d",
+                "reference": "fb6fa1d21c166cc294bcd935baf01f6cfe55f85d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jared Mellentine",
+                    "email": "jared@mellentine.com"
+                }
+            ],
+            "description": "artisan serve for Lumen projects",
+            "homepage": "http://github.com/mlntn/lumen-artisan-serve",
+            "keywords": [
+                "artisan",
+                "lumen"
+            ],
+            "time": "2016-02-11 15:31:31"
         },
         {
             "name": "monolog/monolog",
